@@ -1,0 +1,76 @@
+.message__success{
+    color: #0f5132;
+    background-color: #d1e7dd;
+    /* background-color: #badbcc; */
+    padding: 10px 15px;
+}
+.message__error {
+    color: #842029;
+    background-color: #f8d7da;
+    /* background-color: #badbcc; */
+    padding: 10px 15px;
+}
+.content{
+    margin:90px auto;
+    max-width: 1200px;
+    width:700px;
+}
+.create__form{
+    display: flex;
+    justify-content: space-between;
+}
+.create__input{
+    width:500px;
+    height:40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.content__create{
+    margin-left: 40px;
+    width:100px;
+    height: 40px;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 17px;
+}
+.content__todo {
+    margin: 90px auto;
+    width: 700px;
+}
+.content__todo h2{
+    border-bottom: 1px solid #ddd;
+}
+.content__todo--list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    width:100%;
+}
+.todo__form{
+    display: inline-block;
+}
+.button--red{
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+.button--blue {
+    background-color: #0000ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+.todo__content{
+    border: none;
+    width: 500px;
+    margin:15px 0;
+    font-size: 18px;
+}
