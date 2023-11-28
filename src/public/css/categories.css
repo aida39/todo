@@ -51,10 +51,11 @@
 
 .content {
     margin-top: 40px;
+    /* max-width: 1000px; */
 }
 
 .content table {
-    width: 900px;
+    width: 800px;
 }
 
 .content th {
@@ -66,10 +67,7 @@
 .content tr:first-child {
     border-bottom: solid 1px #ddd;
 }
-.content__header{
-    display: inline-block;
-    width: 350px;
-}
+
 .content__list {
     padding: 0 10px;
     border-bottom: solid 1px #ddd;
@@ -77,18 +75,13 @@
 
 .content__list__input {
     border: none;
-    width: 350px;
+    width: 680px;
+    height: 40px;
     font-size: 16px;
-    padding-left: 10px;
 }
 
 .content__list__input:focus {
     outline: none;
-}
-
-.content__list__category {
-    display: inline-block;
-    width: 400px;
 }
 
 .content__list__button--blue {

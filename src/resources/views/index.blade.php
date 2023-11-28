@@ -17,16 +17,41 @@
 </div>
 @enderror
 <div class="container">
-    <div class="form">
-        <form action="todos" method="post">
+    <div class="form todo-create">
+        <div class="form__title">新規作成</div>
+        <form action="/todos" method="post">
             @csrf
-            <input class="form__input" type="text" name="content"><button class="form__button">作成</button>
+            <input class="form__input" type="text" name="content" value="{{ old('content') }}">
+            <select class="form__categories" name="category_id" >
+                <option value="">カテゴリ</option>
+                @foreach($categories as $category)
+                <option value="{{$category['id']}}">{{$category['name']}}</option>
+                @endforeach
+            </select>
+            <button class="form__button">作成</button>
+        </form>
+    </div>
+    <div class="form todo-search">
+        <div class="form__title">Todo検索</div>
+        <form action="/todos/search" method="get">
+            @csrf
+            <input class="form__input" type="text" name="content">
+            <select class="form__categories" name="category_id" >
+                <option value="">カテゴリ</option>
+                @foreach($categories as $category)
+                <option value="{{$category['id']}}">{{$category['name']}}</option>
+                @endforeach
+            </select>
+            <button class="form__button">検索</button>
         </form>
     </div>
     <div class="content">
         <table>
             <tr>
-                <th>Todo</th>
+                <th>
+                    <span class='content__header'>Todo</span>
+                    <span class='content__header'>カテゴリ</span>
+                </th>
             </tr>
             @foreach($todos as $todo)
             <tr class="content__list">
@@ -36,6 +61,7 @@
                         @csrf
                         <input class="content__list__input" type="text" name='content' value= "{{$todo['content']}}">
                         <input type="hidden" name='id' value= "{{$todo['id']}}">
+                        <p class="content__list__category">{{$todo['category']['name']}}</p>
                         <button class="content__list__button--blue">更新</button>
                     </form>
                 </td>
